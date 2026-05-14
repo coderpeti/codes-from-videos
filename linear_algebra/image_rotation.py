@@ -53,14 +53,14 @@ class ImageRotator:
         # Static label showing the available keyboard shortcuts
         tk.Label(
             self.root,
-            text="Hold down Arrows to rotate incrementally | Press Space to jump to the next quarter",
-            bg="#171717", fg="#888888",
+            text="Hold down Arrows to rotate incrementally  |  Press Space to jump to the next quarter",
+            bg="#888888", fg="#171717",
             font=("Courier", 8)
         ).pack(padx=6)
         # Dynamic label that updates to show the current rotation angle
         self.angle_label = tk.Label(
             self.root, text="0.0°",
-            bg="#171717", fg="#888888",
+            bg="#888888", fg="#171717",
             font=("Courier", 13, "bold")
         )
         self.angle_label.pack()
@@ -69,11 +69,11 @@ class ImageRotator:
         top.pack(pady=6)
         # Shared style options applied to both buttons
         btn = dict(
-            bg="#1c1c1c", fg="#888888",
+            bg="#888888", fg="#171717",
             font=("Courier", 11, "bold"),
             relief="flat", padx=16, pady=6,
-            cursor="hand2", activebackground="#888888",
-            activeforeground="#1c1c1c"
+            cursor="hand2", activebackground="#171717",
+            activeforeground="#888888"
         )
         tk.Button(top, text="Open image", command=self._open_image, **btn).pack(side="right")  # Opens the file dialog to load an image from disk
         tk.Button(top, text="Reset", command=self._reset, **btn).pack(side="right", padx=2)  # Resets the rotation angle back to 0 degrees

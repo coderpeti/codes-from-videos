@@ -123,7 +123,7 @@ class ImageRotator:
         if self.down_job:
             # Cancel the already scheduled but not yet executed rotation step
             self.root.after_cancel(self.down_job)
-            self.up_job = None
+            self.down_job = None
 
     def _continuous_rotate_back(self):
         # Stop if the key was released before this call executed
